@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const fs = require('fs');
 const handlebars = require('express-handlebars');
+const cats = require('./data/cats.json')
 
 const catController = require('./controllers/catController.js');
 const requestLogger = require('./middlewares/requestLoggerMiddleware.js')
