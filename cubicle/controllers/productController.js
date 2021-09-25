@@ -6,21 +6,26 @@ const productHelpers = require('../controllers/helpers/productHelpers')
 const router = Router();
 
 router.get('/', (req, res) => {
-    let products = productService.getAll();
-    res.render('home', { title: 'Cubicle', products })
+    let products = productService.getAll(req.query);
+    res.render('home', { title: 'Cubicle', products });
 });
 
 router.get('/create', (req, res) => {
-    res.render('create', { title: 'Create Cube Page' })
+    res.render('create', { title: 'Create Cube Page' });
 });
 
 router.post('/create', productHelpers.validateProduct, (req, res) => {
-    //TODO Validate inputs 
 
-    let data = req.body;
-    productService.create(data);
+    // productService.create(req.body, (err) => {
+    //     if (err) {
+    //         return res.status(500).end();
+    //     }
+    //     res.redirect('/');
+    // });\
 
-    res.redirect('/')
+    productService.create(req.body)
+        .then(() => res.redirect('/'))
+        .catch(() => res.status(500).end());
 });
 
 router.get('/details/:productId', (req, res) => {
