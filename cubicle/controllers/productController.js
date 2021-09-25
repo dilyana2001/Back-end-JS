@@ -1,4 +1,7 @@
 const { Router } = require('express');
+
+const productService = require('../services/productService')
+
 const router = Router();
 
 router.get('/', (req, res) => {
@@ -10,7 +13,10 @@ router.get('/create', (req, res) => {
 });
 
 router.post('/create', (req, res) => {
-    console.log(req.body);
+    //TODO Validate inputs 
+
+    let data = req.body;
+    productService.create(data);
 
     res.redirect('/')
 });
