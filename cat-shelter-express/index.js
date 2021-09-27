@@ -1,11 +1,11 @@
 const express = require('express');
-const path = require('path');
 const fs = require('fs');
 const handlebars = require('express-handlebars');
-const cats = require('./data/cats.json')
 
+require('./config/db');
 const catController = require('./controllers/catController.js');
-const requestLogger = require('./middlewares/requestLoggerMiddleware.js')
+const createCat = require('./services/createCat.js');
+const Cat = require('./modules/Cat');
 
 const app = express();
 const port = 5000;
@@ -27,8 +27,19 @@ app.use('/cats', catController);
 
 
 app.get('/', (req, res) => {
+
+    //create relation data
+    // createCat('Macka', 'Dilyana')
+    Cat.find({ name: 'Macka' })
+        .populate('owner')
+        .then(cat => {
+            console.log(cat);
+            let name = 'Macka';
+            res.render('home', { name });
+        })
+
     //render with handlebars
-    res.render('home')
+
 
     //custum HTML response
     // let fullpath = path.join(__dirname, '/views/home/index.html');
