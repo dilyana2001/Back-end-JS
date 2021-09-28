@@ -49,30 +49,37 @@
     },
     {
         "id": "12ir26i9sku07bcg6",
-        "name": "Dilyana",
-        "description": "",
-        "imageUrl": "https://img.discogs.com/ZcaAOZMJ8hCEqOBSroRQEFVAnWw=/fit-in/600x600/filters:strip_icc():format(webp):mode_rgb():quality(90)/discogs-images/R-1572706-1229377724.jpeg.jpg",
+        "name": "Dilyana Cube",
+        "description": "Fiki",
+        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZ15ikFrwdnv-6Y3iz9261c7DtdKwKYSUyDg&usqp=CAU",
         "level": "1"
     },
     {
         "id": "12ir26k10ku2g1bl7",
-        "name": "rrrrrrrr",
-        "description": "",
-        "imageUrl": "f",
+        "name": "Cute cube",
+        "description": "Doja Cat",
+        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZ15ikFrwdnv-6Y3iz9261c7DtdKwKYSUyDg&usqp=CAU",
         "level": "1"
     },
     {
         "id": "12ir26lf8ku2gq0qj",
-        "name": "(function(){     alert('hello') })()",
-        "description": "",
-        "imageUrl": "ttttttttttt",
+        "name": "Bebe Cube",
+        "description": "BebeRexha",
+        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZ15ikFrwdnv-6Y3iz9261c7DtdKwKYSUyDg&usqp=CAU",
         "level": "1"
     },
     {
         "id": "12ir26314ku2gqets",
-        "name": "Dilyana",
-        "description": "(function(){\r\n    alert('hello')\r\n})()",
-        "imageUrl": "https://img.discogs.com/ZcaAOZMJ8hCEqOBSroRQEFVAnWw=/fit-in/600x600/filters:strip_icc():format(webp):mode_rgb():quality(90)/discogs-images/R-1572706-1229377724.jpeg.jpg",
+        "name": "SlowMotion",
+        "description": "Your ass hole",
+        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZ15ikFrwdnv-6Y3iz9261c7DtdKwKYSUyDg&usqp=CAU",
         "level": "1"
+    },
+    {
+        "id": "12ir26hysku3szjyw",
+        "name": "Crazy",
+        "description": "new cube",
+        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZ15ikFrwdnv-6Y3iz9261c7DtdKwKYSUyDg&usqp=CAU",
+        "level": "6"
     }
 ]
