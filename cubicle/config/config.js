@@ -4,8 +4,7 @@ const config = {
         DB_CONNECTION: 'mongodb://localhost:27017/cubicle',
     },
     production: {
-        DB_CONNECTION: 'mongodb+srv://admin:R5V4PFlcpqVPQtbM@cluster0.jmdj5.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
-        PORT: 80,
+        PORT: 80
     }
 }
 
