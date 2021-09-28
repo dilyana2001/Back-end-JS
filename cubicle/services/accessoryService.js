@@ -6,6 +6,16 @@ function create(data) {
     return accessory.save();
 }
 
+function getAllWithout(ids) {
+    return Accessory.find({ _id: { $nin: ids } }).lean();
+}
+
+function getAll() {
+    return Accessory.find().lean();
+}
+
 module.exports = {
-    create
+    create,
+    getAllWithout,
+    getAll,
 }
