@@ -1,6 +1,6 @@
 const User = require('../models/User');
 const bcrypt = require('bcrypt');
-const { SALT_ROUNDS, SECRET } = require('../config/config');
+const { SALT_ROUNDS, SECRET } = require('../devConfig');
 const jwt = require('jsonwebtoken');
 const { MongoCursorInUseError } = require('mongodb');
 

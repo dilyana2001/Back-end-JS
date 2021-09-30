@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken');
-const { COOKIE_NAME, SECRET } = require('../config/config')
+const { COOKIE_NAME, SECRET } = require('../devConfig');
 
 module.exports = function() {
     return (req, res, next) => {

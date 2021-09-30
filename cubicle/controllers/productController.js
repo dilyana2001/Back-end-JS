@@ -56,7 +56,7 @@ router.post('/:productId/edit', isAuthenticated, productHelpers.validateProduct,
     productService.getOne(req.params.productId)
         .then(product => {
             if (product.creator != req.user._id) return res.redirect('/');
-            return productService.updateOne(req.params.productId, req.body)
+            return productService.updateOne(req.params.productId, req.body);
         })
         .then(() => res.redirect('/'))
         .catch(() => res.status(500).end());
@@ -73,7 +73,7 @@ router.post('/:productId/delete', isAuthenticated, (req, res) => {
     productService.getOne(req.params.productId)
         .then(product => {
             if (product.creator != req.user._id) return res.redirect('/');
-            return productService.deleteOne(req.params.productId)
+            return productService.deleteOne(req.params.productId);
         })
         .then(() => res.redirect('/'))
         .catch(() => res.status(500).end());

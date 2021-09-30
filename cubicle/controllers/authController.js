@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const authService = require('../services/authService');
-const { COOKIE_NAME } = require('../config/config');
+const { COOKIE_NAME } = require('../devConfig');
 
 const isAuthenticated = require('../middlewares/isAuthenticated');
 const isGuest = require('../middlewares/isGuest');
@@ -22,7 +22,7 @@ router.post('/login', isGuest, async(req, res) => {
 router.get('/register', isGuest, (req, res) => res.render('register', { title: 'Register Page' }));
 
 router.post('/register', isGuest, async(req, res) => {
-    const { username, password, repeatPassword } = req.body
+    const { username, password, repeatPassword } = req.body;
 
     if (password !== repeatPassword) {
         return res.render('register', { message: 'Password missmatch!' });
