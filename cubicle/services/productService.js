@@ -8,6 +8,7 @@ async function getAll(query) {
     if (query.search) {
         products = products.filter(x => x.name.toLowerCase().includes(query.search.toLowerCase()));
     }
+
     if (query.from) {
         products = products.filter(x => x.level >= query.from);
     }
@@ -16,10 +17,7 @@ async function getAll(query) {
     if (query.to) {
         products = products.filter(x => x.level <= query.to);
     }
-
     // Cube.find().lte(query.to);
-
-
 
     return products;
 }
@@ -34,8 +32,8 @@ function getOneWithAccessories(id) {
         .lean();
 }
 
-function create(data) {
-    let cube = new Cube(data);
+function create(data, userId) {
+    let cube = new Cube({...data, creator: userId });
     return cube.save();
 }
 
@@ -46,10 +44,20 @@ async function attachAccessory(productId, acessoryId) {
     return product.save();
 }
 
+function updateOne(id, data) {
+    return Cube.updateOne({ _id: id }, data);
+}
+
+function deleteOne(id) {
+    return Cube.deleteOne({ _id: id })
+}
+
 module.exports = {
     create,
     getAll,
     getOne,
     getOneWithAccessories,
     attachAccessory,
+    updateOne,
+    deleteOne,
 };

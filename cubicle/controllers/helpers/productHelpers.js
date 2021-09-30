@@ -1,5 +1,5 @@
 function validateProduct(req, res, next) {
-    let isValid = true
+    let isValid = true;
     if (req.body.name.trim().length < 1) {
         isValid = false;
     }
